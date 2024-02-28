@@ -19,6 +19,7 @@ export default async function MovieInfo({ id }: { id: string }) {
           className={styles.poster}
           width={360}
           height={480}
+          style={{ objectFit: "contain" }}
         />
       </div>
 
