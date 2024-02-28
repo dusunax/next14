@@ -1,0 +1,24 @@
+{
+  "name": "next-14",
+  "version": "0.9.0",
+  "description": "learn nextjs 14",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "keywords": [
+    "getting started"
+  ],
+  "author": "dusunax",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.20",
+    "@types/react": "18.2.59",
+    "typescript": "5.3.3"
+  }
+}
