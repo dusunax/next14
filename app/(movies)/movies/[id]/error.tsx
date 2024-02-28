@@ -11,7 +11,7 @@ export default function Error(props) {
       <div>
         <button onClick={reset}>다시 시도</button>
         <Link href={".."}>
-          <button onClick={reset}>뒤로 가기</button>
+          <button>뒤로 가기</button>
         </Link>
       </div>
     </>

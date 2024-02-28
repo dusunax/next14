@@ -3,5 +3,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <>Page</>;
+  return <>nextjs 14 작업</>;
 }
