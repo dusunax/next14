@@ -12,7 +12,6 @@ export default function Navigation() {
       const nav = document.querySelector(`.${styles.nav}`) as HTMLElement;
 
       if (window.scrollY > 100) {
-        console.log(nav, styles.sticky);
         nav.classList.add("sticky");
       } else {
         nav.classList.remove("sticky");

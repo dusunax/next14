@@ -5,13 +5,17 @@ import { useRouter } from "next/navigation";
 import styles from "@styles/movie.module.css";
 import Image from "next/image";
 
-interface IMovieProps {
-  id: IMovie["id"];
-  poster_path: IMovie["poster_path"];
-  title: IMovie["title"];
+interface IMovieProps extends IMovie {
+  baseUrl?: string;
 }
 
-export default function Movie({ id, poster_path, title }: IMovieProps) {
+export default function Movie({
+  id,
+  poster_path,
+  title,
+  vote_average,
+  baseUrl,
+}: IMovieProps) {
   const router = useRouter();
   const onClick = () => {
     router.push(`movies/${id}`);
@@ -21,7 +25,7 @@ export default function Movie({ id, poster_path, title }: IMovieProps) {
     <div className={styles.movie} key={id}>
       <div className={styles.aspect}>
         <Image
-          src={poster_path}
+          src={baseUrl ? baseUrl + poster_path : poster_path}
           alt={title}
           onClick={onClick}
           width={360}
@@ -29,7 +33,8 @@ export default function Movie({ id, poster_path, title }: IMovieProps) {
         />
       </div>
       <Link prefetch href={`movies/${id}`}>
-        {title}
+        <p className={styles.info}>{title}</p>
+        <p className={styles.star}>⭐️ {vote_average.toFixed(1)}</p>
       </Link>
     </div>
   );
