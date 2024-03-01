@@ -1,7 +1,7 @@
 import styles from "@styles/home.module.css";
-import { getMovies } from "@app/action";
+import { getMovieByComponents } from "@app/action";
 import LoadMore from "@components/load-more";
-import MovieSection from "@components/movie-section";
+import MovieSectionWrapper from "@components/movie-section-wrapper";
 
 export const metadata = {
   title: "Home",
@@ -9,13 +9,13 @@ export const metadata = {
 
 export default async function HomePage() {
   const page = 1;
-  const { results: movies } = await getMovies(page);
+  const data = await getMovieByComponents(page);
 
   return (
     <main className={styles.container}>
       <h2>Popular Movies</h2>
 
-      <MovieSection movieData={movies} />
+      <MovieSectionWrapper>{data}</MovieSectionWrapper>
       <LoadMore />
     </main>
   );

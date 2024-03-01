@@ -23,6 +23,7 @@ const config: Config = {
     "^@app/(.*)$": "<rootDir>/app/$1",
     "^@components/(.*)$": "<rootDir>/components/$1",
     "^@constants/(.*)$": "<rootDir>/constants/$1",
+    "^@styles/(.*)$": "<rootDir>/styles/$1",
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 };

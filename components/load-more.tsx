@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { getMovies } from "@app/action";
+import { getMovieByComponents } from "@app/action";
 import Spinner from "./load-spinner";
-import MovieSection from "./movie-section";
+import MovieSectionWrapper from "./movie-section-wrapper";
 
 let page = 2;
 
@@ -12,7 +12,7 @@ export default function LoadMore() {
   const [data, setData] = useState([]);
 
   const updateMoviesData = async () => {
-    const { results: res } = await getMovies(page);
+    const res = await getMovieByComponents(page);
     setData([...data, ...res]);
     page++;
   };
@@ -22,9 +22,12 @@ export default function LoadMore() {
   }, [inView]);
 
   return (
-    <div ref={ref}>
-      <MovieSection movieData={data} />
-      <Spinner />
+    <div>
+      <MovieSectionWrapper>{data}</MovieSectionWrapper>
+
+      <div ref={ref}>
+        <Spinner />
+      </div>
     </div>
   );
 }
