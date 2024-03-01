@@ -1,5 +1,5 @@
-import Spinner from "@components/spinner";
+import LoadMore from "@components/load-more";
 
 export default function Loading() {
-  return <Spinner />;
+  return <LoadMore />;
 }

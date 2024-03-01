@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import MovieInfo from "@components/movie-info";
 import MovieVideos from "@components/movie-videos";
-import Spinner from "@components/spinner";
+import LoadMore from "@components/load-more";
 import { getMovie } from "app/action";
 
 interface IParams {
@@ -20,7 +20,7 @@ export default async function MovieDetail({ params: { id } }: IParams) {
     <>
       <MovieInfo id={id} />
 
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<LoadMore />}>
         <MovieVideos id={id} />
       </Suspense>
     </>

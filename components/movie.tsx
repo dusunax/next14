@@ -1,13 +1,18 @@
-"use client";
 import Link from "next/link";
-import { IMovie } from "types/movie";
-import { useRouter } from "next/navigation";
-import styles from "@styles/movie.module.css";
 import Image from "next/image";
+import { IMovie } from "types/movie";
+import styles from "@styles/movie.module.css";
+import { MotionDiv } from "./motion-div";
 
 interface IMovieProps extends IMovie {
   baseUrl?: string;
+  index: number;
 }
+
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
 
 export default function Movie({
   id,
@@ -15,27 +20,28 @@ export default function Movie({
   title,
   vote_average,
   baseUrl,
+  index,
 }: IMovieProps) {
-  const router = useRouter();
-  const onClick = () => {
-    router.push(`movies/${id}`);
-  };
-
   return (
-    <div className={styles.movie} key={id}>
-      <div className={styles.aspect}>
-        <Image
-          src={baseUrl ? baseUrl + poster_path : poster_path}
-          alt={title}
-          onClick={onClick}
-          width={360}
-          height={480}
-        />
-      </div>
+    <MotionDiv
+      className={styles.movie}
+      initial="hidden"
+      animate="visible"
+      transition={{ delay: (index % 20) * 0.1, ease: "easeIn", duration: 0.5 }}
+      variants={variants}
+    >
       <Link prefetch href={`movies/${id}`}>
+        <div className={styles.aspect}>
+          <Image
+            src={baseUrl ? baseUrl + poster_path : poster_path}
+            alt={title}
+            width={360}
+            height={480}
+          />
+        </div>
         <p className={styles.info}>{title}</p>
         <p className={styles.star}>⭐️ {vote_average.toFixed(1)}</p>
       </Link>
-    </div>
+    </MotionDiv>
   );
 }
