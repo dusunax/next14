@@ -1,3 +1,7 @@
 node_modules
 .next
 .env
+
+# Testing
+__snapshots__/
+coverage/

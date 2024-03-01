@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { getMovies } from "app/action";
+import { getMovies } from "@app/action";
 import Spinner from "./load-spinner";
 import MovieSection from "./movie-section";
 

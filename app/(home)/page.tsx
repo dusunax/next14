@@ -1,5 +1,5 @@
 import styles from "@styles/home.module.css";
-import { getMovies } from "app/action";
+import { getMovies } from "@app/action";
 import LoadMore from "@components/load-more";
 import MovieSection from "@components/movie-section";
 
