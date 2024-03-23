@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "debug": "NODE_OPTIONS='--inspect' next dev"
   },
   "keywords": [
     "getting started"
