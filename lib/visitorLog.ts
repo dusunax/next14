@@ -1,4 +1,6 @@
-const logData = [];
+// debugging snapshot
+// ab - k - c 50 - n 10000 "http://127.0.0.1:3000/"
+var logData = [];
 
 export interface IFvisitorInfo {
   userAgent: string;

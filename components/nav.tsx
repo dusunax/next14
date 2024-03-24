@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import styles from "@styles/nav.module.css";
 import { useEffect } from "react";
 
 export default function Navigation() {
+  const router = useRouter();
   const path = usePathname();
 
   useEffect(() => {
@@ -22,10 +23,14 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const goBack = () => {
+    router.back(); // 라우터를 사용하여 이전 페이지로 이동
+  };
+
   return (
     <nav className={styles.nav}>
-      <button className={styles.goback}>
-        <Link href="..">&larr;</Link>
+      <button className={styles.goback} onClick={goBack}>
+        &larr;
       </button>
       <ul>
         <li>
