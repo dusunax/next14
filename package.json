@@ -9,7 +9,9 @@
     "start": "next start",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "debug": "NODE_OPTIONS='--inspect' next dev"
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "cypress:test": "cypress open",
+    "cypress:run": "cypress run"
   },
   "keywords": [
     "getting started"
@@ -31,6 +33,8 @@
     "@types/jest": "^29.5.12",
     "@types/node": "20.11.20",
     "@types/react": "18.2.59",
+    "cypress": "^13.7.1",
+    "cypress-react-selector": "^3.0.0",
     "eslint-plugin-jest-dom": "^5.1.0",
     "eslint-plugin-testing-library": "^6.2.0",
     "jest": "^29.7.0",

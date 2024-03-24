@@ -29,7 +29,7 @@ export default function Navigation() {
 
   return (
     <nav className={styles.nav}>
-      <button className={styles.goback} onClick={goBack}>
+      <button className={`goback ${styles.goback}`} onClick={goBack}>
         &larr;
       </button>
       <ul>
