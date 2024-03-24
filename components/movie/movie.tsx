@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { IMovie } from "types/movie";
 import styles from "@styles/movie.module.css";
-import { MotionDiv } from "./motion-div";
+import { MotionDiv } from "../motion-div";
 
 interface IMovieProps extends IMovie {
   baseUrl?: string;

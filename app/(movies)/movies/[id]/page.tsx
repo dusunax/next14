@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import MovieInfo from "@components/movie-info";
-import MovieVideos from "@components/movie-videos";
-import LoadMore from "@components/load-more";
+import MovieInfo from "@components/movie/movie-info";
+import MovieVideos from "@components/movie/movie-videos";
+import LoadMore from "@components/movie/load-more";
 import { getMovie } from "app/action";
 
 interface IParams {

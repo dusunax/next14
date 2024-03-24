@@ -1,7 +1,7 @@
 import styles from "@styles/home.module.css";
 import { getMovieByComponents } from "@app/action";
-import LoadMore from "@components/load-more";
-import MovieSectionWrapper from "@components/movie-section-wrapper";
+import LoadMore from "@components/movie/load-more";
+import MovieSectionWrapper from "@components/movie/movie-section-wrapper";
 
 export const metadata = {
   title: "Home",

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { getMovieByComponents } from "@app/action";
-import Spinner from "./load-spinner";
+import Spinner from "@components/common/load-spinner";
 import MovieSectionWrapper from "./movie-section-wrapper";
 
 let page = 2;

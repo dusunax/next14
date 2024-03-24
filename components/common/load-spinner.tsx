@@ -1,5 +1,5 @@
 import styles from "@styles/spinner.module.css";
-import { MotionDiv } from "./motion-div";
+import { MotionDiv } from "../motion-div";
 
 const variants = {
   hidden: { opacity: 0 },

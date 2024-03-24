@@ -1,5 +1,5 @@
 "use server";
-import Movie from "@components/movie";
+import Movie from "@components/movie/movie";
 import { API_AUTH, LANGUAGE_CONFIG, POSTER_URL } from "@constants/common";
 import { IMovie } from "types/movie";
 
