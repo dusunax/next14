@@ -2,9 +2,9 @@ import React from "react";
 import { Avatar, Card } from "antd";
 
 const Profile = ({ name, avatar }) => (
-  <div className="flex flex-col items-center">
+  <div>
     <Avatar src={avatar} size={48} />
-    <span className="text-sm font-medium">{name}</span>
+    <span>{name}</span>
   </div>
 );
 
@@ -19,7 +19,7 @@ export default function ProfileList() {
 
   return (
     <Card style={{ width: 300, marginTop: 16 }} loading={loading}>
-      <div className="grid grid-cols-3 gap-4 pt-6">
+      <div>
         {profiles.map((profile, index) => (
           <Profile key={index} name={profile.name} avatar={profile.avatar} />
         ))}

@@ -11,13 +11,13 @@ export default function ProfileForm() {
   );
 
   return (
-    <Card title="Upload Profile Image" className="w-full max-w-3xl">
+    <Card title="Upload Profile Image">
       <p>Choose an image to set as your profile picture.</p>
-      <div className="flex items-center gap-6 pt-6">
+      <div>
         <Upload listType="picture-card" className="avatar-uploader">
           {uploadButton}
         </Upload>
-        <div className="grid w-full gap-2">
+        <div>
           <Input type="file" id="file" style={{ paddingBottom: "24px" }} />
           <Button type="primary">Submit</Button>
         </div>

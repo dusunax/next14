@@ -20,7 +20,7 @@ export default function Profile() {
   });
 
   return (
-    <Card title="Upload Profile Image" className="w-full max-w-3xl">
+    <Card title="Upload Profile Image">
       <p>Choose an image to set as your profile picture.</p>
 
       <ProfileForm />
