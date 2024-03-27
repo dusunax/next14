@@ -24,7 +24,7 @@ export default function Navigation() {
   }, []);
 
   const goBack = () => {
-    router.back(); // 라우터를 사용하여 이전 페이지로 이동
+    router.back();
   };
 
   return (
@@ -40,6 +40,9 @@ export default function Navigation() {
           <Link href="/about-us">
             About Us {path === "/about-us" ? "👈" : ""}
           </Link>
+        </li>
+        <li>
+          <Link href="/profile">Profile {path === "/profile" ? "👈" : ""}</Link>
         </li>
       </ul>
     </nav>

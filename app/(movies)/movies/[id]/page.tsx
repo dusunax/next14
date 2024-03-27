@@ -15,7 +15,7 @@ export async function generateMetadata({ params: { id } }: IParams) {
   };
 }
 
-export default async function MovieDetail({ params: { id } }: IParams) {
+export default async function MovieDetailPage({ params: { id } }: IParams) {
   return (
     <>
       <MovieInfo id={id} />
