@@ -1,6 +1,10 @@
 node_modules
 .next
 .env
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
 
 # Testing
 __snapshots__/
